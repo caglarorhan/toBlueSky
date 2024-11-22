@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "redirect",
+        "redirect": {
+          "url": "https://bsky.app"
+        }
+      },
+      "condition": {
+        "urlFilter": "||twitter.com",
+        "resourceTypes": ["main_frame", "sub_frame"]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "action": {
+        "type": "redirect",
+        "redirect": {
+          "url": "https://bsky.app"
+        }
+      },
+      "condition": {
+        "urlFilter": "||x.com",
+        "resourceTypes": ["main_frame", "sub_frame"]
+      }
+    }
+  ]
