@@ -2,8 +2,8 @@
     "manifest_version": 3,
     "name": "toBlueSky",
     "short_name": "toBlueSky",
-    "version": "2024.0.2",
-    "description": "Redirects ANY visit to twitter.com or x.com to bluesky.com.",
+    "version": "2024.0.3",
+    "description": "Redirects ANY visit to twitter.com or x.com toBlueSky",
     "icons": {
         "16": "./img/icon_16.png",
         "32": "./img/icon_32.png",

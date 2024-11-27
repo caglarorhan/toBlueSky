@@ -1,17 +1,21 @@
 const uncheckGiveUpMessages = [
     "Do you really want to see M.Elon's garbage?", 
     "Of course you are an adult!",
-    "Here you go, you won!",
+    "Here you go, almost there!",
     "Open sesame open!"];
 
     document.addEventListener('DOMContentLoaded', function() {
         const checkbox = document.getElementById('toggleRedirect');
         const message = document.getElementById('message');
+        const explain = document.getElementById('explain');
+        const theSwitchButton = document.querySelector('.switch');
         const toggleLabel = document.querySelector('.toggle-label');
         let attempts = 0;
         
         function updateToggleLabel(isEnabled) {
             toggleLabel.textContent = isEnabled ? "Redirection Enabled" : "Redirection Disabled";
+            explain.textContent = isEnabled ? ' You need to remove 4 rocks to open the gate. (Open sesame open!)': 'Now you can visit twitter.com (come back soon)';
+            theSwitchButton.title = isEnabled ? 'Click to disable redirection (need few clicks)' : 'Click to enable redirection';
         }
     
         // Load the current state
@@ -35,14 +39,13 @@ const uncheckGiveUpMessages = [
                 event.preventDefault(); // Prevent unchecking
                 attempts++;
                 
-                if (attempts < 3) {
-                    // First two attempts
+                if (attempts < 5) {
                     checkbox.checked = true; // Keep it checked
-                    message.textContent = `${uncheckGiveUpMessages[attempts-1]} (${3-attempts} rocks left)`;
+                    message.textContent = `${uncheckGiveUpMessages[attempts-1]} (${5-attempts} rocks left)`;
                     message.style.display = 'block';  // Show the message
                 } else {
                     // Third attempt
-                    message.textContent = "You win! Redirection disabled.";
+                    message.textContent = "Redirection disabled. Don't stay there too long.";
                     message.style.display = 'block';  // Show the message
                     checkbox.checked = false;
                     chrome.storage.sync.set({redirectEnabled: false});
