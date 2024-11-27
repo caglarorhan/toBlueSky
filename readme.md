@@ -13,7 +13,11 @@ toBlueSky is a Chrome extension that automatically redirects users from Twitter 
 
 ## Installation
 
-1. Download the extension files or clone this repository.
+1. Installing from Chrome Web Store: [toBlueSky](https://chromewebstore.google.com/detail/tobluesky/cdkjnkjfbjbhenanmaddofmkniphkfbg)
+
+OR use it from GitHub repo: 
+
+1. Download the extension files or clone [this repository](https://github.com/caglarorhan/toBlueSky).
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click "Load unpacked" and select the directory containing the extension files.
@@ -31,8 +35,9 @@ Note: The extension includes a playful feature that requires multiple attempts t
 
 This extension requires minimal permissions:
 
-- `declarativeNetRequest`: For redirecting web requests
+- `declarativeNetRequest`: For cathing web requests
 - `storage`: To save your preferences
+- `tabs`: To catch and redirect tab urls
 
 ## Privacy
 
